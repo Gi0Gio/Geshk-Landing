@@ -1,10 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CodeInfo from '../section/CodeInfo.astro';
+import DesignInfo from '../section/DesignInfo.astro';
+import IndexTitle from '../section/IndexTitle.astro';
+import TutoringInfo from '../section/TutoringInfo.astro';
+import ExplorerBox from '../components/ExplorerBox.astro';
 ---
-
 <Layout title="Welcome to Astro.">
-	<main>
-		<!-- Aqui va tooooodo lo que vamos a poner en el landing -->
-		<h1>Welcome to Astro</h1>
+	<main class="mt-10 mx-20 flex flex-col gap-20">
+		<div class="flex flex-row justify-between">
+			<IndexTitle/>
+			<ExplorerBox/>
+		</div>
+		<section class="w-full flex flex-row justify-between">
+			<CodeInfo/>
+			<DesignInfo/>
+			<TutoringInfo/>
+		</section>
 	</main>
 </Layout>
